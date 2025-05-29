@@ -27,10 +27,12 @@ services:
   frontend:
     build:
       context: ../BlinkEXS
-      dockerfile: dockerfile
+      dockerfile: .dockerfile
     container_name: frontend
     environment:
       VITE_BACKEND_URL: api
+      VITE_ALLOW_URL: drtyui.ru
+
     ports:
       - "5173:5173"
     networks:
